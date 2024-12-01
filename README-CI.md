@@ -20,7 +20,7 @@ To build a container that runs the angular site, simply make sure npm and node a
 
 `CMD ["ng", "serve", "--host", "0.0.0.0"]` starts the angular application on local host
 
-To build an image from the `Dockerfile`, simply run command `docker build -t [USERNAME/REPONAME] inside of the same repository as the `Dockerfile`
+To build an image from the `Dockerfile`, simply run command `docker build -t [USERNAME/REPONAME]` inside of the same repository as the `Dockerfile`
 
 To run a container from the image that was built, run the command `docker run -p [PORTNUMBER] [REPONAME]`
 
@@ -29,5 +29,9 @@ To view the application running from the container, simply navigate to `https://
 ## Working with DockerHub
 To create a public repo in DockerHub, navigate to [here](https://hub.docker.com), log in, and simply select create a repository in the top right. Simply name the repository and ensure that public is selected, and create.
 
+To push your container image to DockerHub, simply ensure that your image name matches the [username]/[reponame] format by using the command `docker images`. If your image name matches your DockerHub username and repository name format, run the command `docker push [username]/[reponame]` to push your image to the DockerHub. 
 
+[Link to DockerHub repo](https://hub.docker.com/repository/docker/cyrus60/straley-ceg3120/general)
 	
+
+# Part 2
