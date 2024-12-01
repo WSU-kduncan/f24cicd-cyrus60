@@ -9,10 +9,15 @@ To install Docker on wsl ubuntu, simply run the command `sudo apt install docker
 To build a container that runs the angular site, simply make sure npm and node are installed correctly, install the angular cli `npm install -g @angular/cli`, and run the command `ng serve --host 0.0.0.0` inside of the angular application folder.
 
 `FROM node:18-bullseye` specifies which software image to include in the container
+
 `WORKDIR /usr/src/app` establishes the working directory of the container
+
 `COPY . /usr/src/app` copies the files from the directory of the Dockerfile into `/usr/src/app`
+
 `RUN npm install -g @angular/cli@15.0.3` installs the necesarry angular cli for the application.
+
 `RUN npm install` installs any necesarry node modules
+
 `CMD ["ng", "serve", "--host", "0.0.0.0"]` starts the angular application on local host
 
 To build an image from the `Dockerfile`, simply run command `docker build -t [USERNAME/REPONAME] inside of the same repository as the `Dockerfile`
@@ -22,5 +27,7 @@ To run a container from the image that was built, run the command `docker run -p
 To view the application running from the container, simply navigate to `https://localhost:[PORTNUMBER]` in a browser
 
 ## Working with DockerHub
-To create a public repo in DockerHub, 
+To create a public repo in DockerHub, navigate to [here](https://hub.docker.com), log in, and simply select create a repository in the top right. Simply name the repository and ensure that public is selected, and create.
+
+
 	
