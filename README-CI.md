@@ -35,3 +35,11 @@ To push your container image to DockerHub, simply ensure that your image name ma
 	
 
 # Part 2
+
+## Configuring GitHub secrets
+To set a secret for use by GitHub actions, simply navigate to your repository settings, scroll to the botton left of the settings, select sercrets and variables, and then actions from the drop down menu. Here you can setup your specific secrets
+
+The secrets setup for this project are DOCKER_USERNAME which contains the username to your DockerHub account, and DOCKER_TOKEN which contains the token to your DockerHub account.
+
+## Behavior of GitHub workflow
+
