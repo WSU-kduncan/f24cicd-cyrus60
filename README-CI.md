@@ -1,7 +1,7 @@
 # Part 1
 
 ## Project overview
-The point of this project is to user Docker, a container engine/application used to containerize applications to containerize an already made angular JS application. The advantages of containerization are multiple, including to centralize all necesarry software dependancies in a single unit, allowing for the ease of replication of the software across different hardware. 
+The point of this project is to user Docker, a container engine/application used to containerize applications to containerize an already made angular JS application. The advantages of containerization are multiple, including to centralize all necesarry software dependancies in a single unit, allowing for the ease of replication of the software across different hardware. The other portion of the project involves using GitHub actions to continously implement any changes made to the application. The action used in this project will verify to DockerHub using GitHub secrets and build to push a new image upon any pushes made to the Git repository.
 
 ## Containerizing your Application
 To install Docker on wsl ubuntu, simply run the command `sudo apt install docker.io`. To install Docker desktop on windows, (which is also required), navigate to this [link](https://www.docker.com/products/docker-desktop/) and select the download for your operating system.
@@ -39,7 +39,7 @@ To push your container image to DockerHub, simply ensure that your image name ma
 ## Configuring GitHub secrets
 To set a secret for use by GitHub actions, simply navigate to your repository settings, scroll to the botton left of the settings, select sercrets and variables, and then actions from the drop down menu. Here you can setup your specific secrets
 
-The secrets setup for this project are DOCKER_USERNAME which contains the username to your DockerHub account, and DOCKER_TOKEN which contains the token to your DockerHub account.
+The secrets setup for this project are DOCKERHUB_USERNAME which contains the username to your DockerHub account, and DOCKERHUB_TOKEN which contains the token to your DockerHub account.
 
 ## Behavior of GitHub workflow
  
