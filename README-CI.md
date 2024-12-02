@@ -3,6 +3,8 @@
 ## Project overview
 The point of this project is to user Docker, a container engine/application used to containerize applications to containerize an already made angular JS application. The advantages of containerization are multiple, including to centralize all necesarry software dependancies in a single unit, allowing for the ease of replication of the software across different hardware. The other portion of the project involves using GitHub actions to continously implement any changes made to the application. The action used in this project will verify to DockerHub using GitHub secrets and build to push a new image upon any pushes made to the Git repository.
 
+![diagram of project](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/ci-diagram.png) 
+
 ## Containerizing your Application
 To install Docker on wsl ubuntu, simply run the command `sudo apt install docker.io`. To install Docker desktop on windows, (which is also required), navigate to this [link](https://www.docker.com/products/docker-desktop/) and select the download for your operating system.
 
