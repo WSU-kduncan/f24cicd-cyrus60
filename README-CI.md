@@ -42,4 +42,4 @@ To set a secret for use by GitHub actions, simply navigate to your repository se
 The secrets setup for this project are DOCKER_USERNAME which contains the username to your DockerHub account, and DOCKER_TOKEN which contains the token to your DockerHub account.
 
 ## Behavior of GitHub workflow
-
+ 
