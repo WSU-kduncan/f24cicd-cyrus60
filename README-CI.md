@@ -42,4 +42,8 @@ To set a secret for use by GitHub actions, simply navigate to your repository se
 The secrets setup for this project are DOCKERHUB_USERNAME which contains the username to your DockerHub account, and DOCKERHUB_TOKEN which contains the token to your DockerHub account.
 
 ## Behavior of GitHub workflow
- 
+The workflow file for this repository simply logs into DockerHub via the pre configured repository secrets, and builds and pushes container images each time there is a push on any branch in the repository.
+
+[link to workflow file](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/.github/workflows/continous-integration.yml) 
+
+If one were to duplicate my project including the workflow file and all, there would be some necesarry changes to be made. The user recreating the project would have to configure their secrets in their GitHub account to reflect their DockerHub username and auth token. The user would also need to change the last line in the workflow file to reflect their DockerHub repository name
