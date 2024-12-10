@@ -2,11 +2,25 @@ name: ci
 
 on:
   push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      -
+        name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/straley-ceg3120
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -24,4 +38,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/straley-ceg3120:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
