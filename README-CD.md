@@ -12,3 +12,5 @@ The GitHub workflow now only triggers when a valid semver (1.0.0) tag is pushed 
 [Link to DockerHub repo](https://hub.docker.com/repository/docker/cyrus60/straley-ceg3120/general)
 
 # Part 2 - Deployment 
+
+## 
