@@ -9,4 +9,6 @@ To generate a tag in git, simply make the commit that you want to be tagged, use
 ## Behavior of GitHub workflow
 The GitHub workflow now only triggers when a valid semver (1.0.0) tag is pushed to the GitHub repository. The GitHUb workflow still signs into DockerHub and  builds and pushes new images. However, this workflow uses the Docker metadata-action to parse version information via the git repository, allowing us to reference this metadata later when pushing the tagged version of DockerHub, now allowing for proper versioning of images and rollbacks if necesarry.
 
-[Link to DockerHub repo](https://hub.docker.com/repository/docker/cyrus60/straley-ceg3120/general) 
+[Link to DockerHub repo](https://hub.docker.com/repository/docker/cyrus60/straley-ceg3120/general)
+
+# Part 2 - Deployment 
