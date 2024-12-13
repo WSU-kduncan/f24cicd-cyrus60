@@ -13,8 +13,11 @@ The GitHub workflow now only triggers when a valid semver (1.0.0) tag is pushed 
 
 # Part 2 - Deployment 
 
-##
+## Instance information
+Public IP: 34.226.93.85
+OS: Ubuntu 20
 
-##
+## `bash` script
+The purpose of the bash script is the code that will be executed everytime the webhook endpoint it hit. The code stops the current running container, pulls the new image from DockerHub, and starts a new container with the new image. My bash script on the instance is simply located at `/home/ubuntu/script.sh`. 
 
 ## 
