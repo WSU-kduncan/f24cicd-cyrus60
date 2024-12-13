@@ -44,5 +44,6 @@ To setup the webhook through DockerHub, navigate to the webhooks section of your
 ## How to modify or create a webhook service file
 To modify the service file such that the listener runs upon system startup, navigate to `/usr/lib/systemd/system/webhook.service`, and alter the path to your hooks file in the `ConditionPathExists` and `ExecStart` fields.
 
-[service file](
+[service file](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/deployment/webhook.service)
 
+# Part 3 - Diagramming
