@@ -18,6 +18,16 @@ Public IP: 34.226.93.85
 OS: Ubuntu 20
 
 ## `bash` script
-The purpose of the bash script is the code that will be executed everytime the webhook endpoint it hit. The code stops the current running container, pulls the new image from DockerHub, and starts a new container with the new image. My bash script on the instance is simply located at `/home/ubuntu/script.sh`. 
+The purpose of the bash script is the code that will be executed everytime the webhook endpoint it hit. The code stops the current running container, pulls the new image from DockerHub, and starts a new container with the new image. My bash script on the instance is simply located at `/home/ubuntu/script.sh`.
 
-## 
+[script](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/deployment/script.sh) 
+
+## Purpose of adnanh's `webhook`
+The purpose of installing this webhook software to the instance is to have a webhook service that will listen on port 9000 and handle any processing necesarry once the endpoint is hit. To install this software, run the command `sudo apt install webhook`.
+
+## Webhook / hook task definition file
+The hook task definition file signifies which endpoint to run the hook on (id), which commands (scripts) to run once the endpoint is hit (execute-command), and which directory the hook will work out of (command-working-directory). 
+
+The location of my task definition file on my instance is /home/ubuntu/hooks.json
+
+[task definition file](
