@@ -47,3 +47,4 @@ To modify the service file such that the listener runs upon system startup, navi
 [service file](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/deployment/webhook.service)
 
 # Part 3 - Diagramming
+![diagram](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/cd-diagram.png)
