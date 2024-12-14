@@ -3,6 +3,8 @@
 ## Project overview
 This project uses github actions, semantic versioning, and webhooks to continuously deploy version tagged containerized web applications on an aws instance. 
 
+![diagram](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/cd-diagram.png)
+
 ## Generating/pushing tag in git
 To generate a tag in git, simply make the commit that you want to be tagged, use the command `git tag -a <tagname>`, and to push the tag use the command `git push origin <tagname>`
 
@@ -46,5 +48,4 @@ To modify the service file such that the listener runs upon system startup, navi
 
 [service file](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/deployment/webhook.service)
 
-# Part 3 - Diagramming
-![diagram](https://github.com/WSU-kduncan/f24cicd-cyrus60/blob/master/cd-diagram.png)
+
